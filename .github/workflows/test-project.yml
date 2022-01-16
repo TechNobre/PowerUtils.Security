@@ -1,15 +1,19 @@
-name: 'Development analysis'
+name: 'Test project'
 
 on:
   push:
     branches:
       - develop
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches:
+      - main
 
 
 jobs:
 
   test-project:
-    name: "Test project"
+    name: "Testing project"
     runs-on: ubuntu-latest
 
     steps:
