@@ -1,9 +1,10 @@
 # PowerUtils.Security
 Helpers, extensions and utilities to work with security
 
-![CI](https://github.com/TechNobre/PowerUtils.Security/actions/workflows/main.yml/badge.svg)
+![CI](https://github.com/TechNobre/PowerUtils.Security/actions/workflows/test-project.yml/badge.svg)
 [![NuGet](https://img.shields.io/nuget/v/PowerUtils.Security.svg)](https://www.nuget.org/packages/PowerUtils.Security)
 [![Nuget](https://img.shields.io/nuget/dt/PowerUtils.Security.svg)](https://www.nuget.org/packages/PowerUtils.Security)
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=TechNobre_PowerUtils.Security)](https://sonarcloud.io/summary/new_code?id=TechNobre_PowerUtils.Security)
 
 
 
