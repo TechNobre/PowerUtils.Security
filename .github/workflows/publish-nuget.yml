@@ -10,7 +10,6 @@ jobs:
 
   deploy-nuget:
     name: "Deploy NuGet"
-    needs: sonar-scanner
     runs-on: ubuntu-latest
 
     steps:
