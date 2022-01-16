@@ -23,6 +23,12 @@ Helpers, extensions and utilities to work with security
   - [string.ToSHA256](#string.ToSHA256)
   - [string.ToSHA384](#string.ToSHA384)
   - [string.ToSHA512](#string.ToSHA512)
+- [EncodeExtensions](#EncodeExtensions)
+  - [string.ToBase64](#string.ToBase64)
+  - [string.FromBase64](#string.FromBase64)
+- [EncryptExtensions](#EncryptExtensions)
+  - [string.Encrypt](#string.Encrypt)
+  - [string.Decrypt](#string.Decrypt)
 
 
 
@@ -42,6 +48,8 @@ Install-Package PowerUtils.Security
 ```
 dotnet add package PowerUtils.Security
 ```
+
+
 
 ### HashExtensions <a name="HashExtensions"></a>
 
@@ -83,6 +91,48 @@ Convert a text to hash SHA512
 ```csharp
 // result = "410752b9f6fef035ccb2b469bcc473d7d43e93a108332bc1eb3208412d599bb4478eea687c69f962d7670410b06deaeac77578452f7c2454f3100d017a802b7e"
 var result = "a123456".ToSHA512();
+```
+
+
+### EncodeExtensions <a name="EncodeExtensions"></a>
+
+#### string.ToBase64(); <a name="string.ToBase64"></a>
+Encode text to base64
+
+```csharp
+// result = "SGVsbG9Xb3JsZA=="
+var result = "HelloWorld".ToBase64();
+```
+
+#### string.FromBase64(); <a name="string.FromBase64"></a>
+Decode base64 to original text
+
+```csharp
+// result = "HelloWorld"
+var result = "SGVsbG9Xb3JsZA==".FromBase64();
+```
+
+
+### EncryptExtensions <a name="EncryptExtensions"></a>
+
+#### string.Encrypt(passPhrase); <a name="string.Encrypt"></a>
+Encrypt text based in passPhrase
+
+```csharp
+var passPhrase = "fssdf4523543dfd";
+
+// result = "zhwH2dmpqUebzikGD4UHnw=="
+var result = "HelloWorld".Encrypt();
+```
+
+#### string.Decrypt(passPhrase); <a name="string.Decrypt"></a>
+Decrypt cipher text
+
+```csharp
+var passPhrase = "fssdf4523543dfd";
+
+// result = "HelloWorld"
+var result = "zhwH2dmpqUebzikGD4UHnw==".Decrypt();
 ```
 
 
