@@ -4,6 +4,7 @@ using Xunit;
 
 namespace PowerUtils.Security.Tests.HashExtensionsTests;
 
+[Trait("Category", "Hash")]
 [Trait("Extension", "HashExtensions")]
 [Trait("Hash", "SHA512")]
 public class SHA512Tests
