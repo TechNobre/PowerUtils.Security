@@ -26,11 +26,18 @@ namespace PowerUtils.Security
         /// <param name="text">Text to encrypt</param>
         /// <param name="passPhrase">Pass phrase</param>
         /// <returns>Cipher text</returns>
+        /// <exception cref="ArgumentNullException">The <paramref name="text">text</paramref> parameter is null.</exception>
+        /// <exception cref="ArgumentNullException">The <paramref name="passPhrase">passPhrase</paramref> parameter is null.</exception>
         public static string Encrypt(this string text, string passPhrase)
         {
             if(text == null)
             {
                 throw new ArgumentNullException(nameof(text));
+            }
+
+            if(passPhrase == null)
+            {
+                throw new ArgumentNullException(nameof(passPhrase));
             }
 
             var plainTextBytes = Encoding.UTF8.GetBytes(text);
@@ -63,11 +70,18 @@ namespace PowerUtils.Security
         /// <param name="cipherText">Cipher text to decrypt</param>
         /// <param name="passPhrase">Pass phrase</param>
         /// <returns>Original text</returns>
+        /// <exception cref="ArgumentNullException">The <paramref name="cipherText">cipherText</paramref> parameter is null.</exception>
+        /// <exception cref="ArgumentNullException">The <paramref name="passPhrase">passPhrase</paramref> parameter is null.</exception>
         public static string Decrypt(this string cipherText, string passPhrase)
         {
             if(cipherText == null)
             {
                 throw new ArgumentNullException(nameof(cipherText));
+            }
+
+            if(passPhrase == null)
+            {
+                throw new ArgumentNullException(nameof(passPhrase));
             }
 
             var cipherTextBytes = Convert.FromBase64String(cipherText);

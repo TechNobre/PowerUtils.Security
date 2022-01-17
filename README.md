@@ -29,6 +29,9 @@ Helpers, extensions and utilities to work with security
 - [EncryptExtensions](#EncryptExtensions)
   - [string.Encrypt](#string.Encrypt)
   - [string.Decrypt](#string.Decrypt)
+- [UtilsAuth](#UtilsAuth)
+  - [UtilsAuth.ToBasicAuth](#UtilsAuth.ToBasicAuth)
+  - [string.FromBasicAuth](#string.FromBasicAuth)
 
 
 
@@ -136,6 +139,28 @@ var result = "zhwH2dmpqUebzikGD4UHnw==".Decrypt();
 ```
 
 
+### UtilsAuth <a name="UtilsAuth"></a>
+
+#### UtilsAuth.ToBasicAuth(username, password); <a name="UtilsAuth.ToBasicAuth"></a>
+Encode username and password to basic authentication (btoa) [Beautiful to Awful]
+
+```csharp
+var username = "jon";
+var password = "a123456";
+
+// result = "am9uOmExMjM0NTY="
+var result = UtilsAuth.ToBasicAuth(username, password);
+```
+
+#### string.FromBasicAuth(); <a name="string.FromBasicAuth"></a>
+Decode from basic authentication (atob) [Awful to Beautiful]
+
+```csharp
+// username = "jon" | password = "a123456"
+var result = "am9uOmExMjM0NTY=".FromBasicAuth();
+```
+
+
 
 ## Contribution
 
@@ -152,6 +177,6 @@ var result = "zhwH2dmpqUebzikGD4UHnw==".Decrypt();
 ## Release Notes
 
 
-### v1.0.0 - 2022/01/16
+### v1.0.0 - 2022/01/17
 
 - Start project

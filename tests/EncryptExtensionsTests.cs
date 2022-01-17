@@ -14,7 +14,7 @@ public class EncryptExtensionsTests
         _passPhrase = "dsafdsfsdf40954387";
 
     [Fact(DisplayName = "Try to encrypt a null text - Should return an 'ArgumentNullException'")]
-    public void Encrypt_Null_ArgumentNullException()
+    public void Encrypt_NullText_ArgumentNullException()
     {
         // Arrange
         string text = null;
@@ -32,10 +32,8 @@ public class EncryptExtensionsTests
             .Be($"Value cannot be null. (Parameter '{nameof(text)}')");
     }
 
-
-
     [Fact(DisplayName = "Try to decrypt a null cipher text - Should return an 'ArgumentNullException'")]
-    public void Decrypt_Null_ArgumentNullException()
+    public void Decrypt_NullText_ArgumentNullException()
     {
         // Arrange
         string cipherText = null;
@@ -53,10 +51,50 @@ public class EncryptExtensionsTests
             .Be($"Value cannot be null. (Parameter '{nameof(cipherText)}')");
     }
 
+    [Fact(DisplayName = "Try to encrypt a text with null passPhrase - Should return an 'ArgumentNullException'")]
+    public void Encrypt_NullPassPhrase_ArgumentNullException()
+    {
+        // Arrange
+        var text = "fake";
+        string passPhrase = null;
+
+
+        // Act
+        var act = Record.Exception(() => text.Encrypt(passPhrase));
+
+
+        // Assert
+        act.Should()
+            .BeOfType<ArgumentNullException>();
+
+        act.Message.Should()
+            .Be($"Value cannot be null. (Parameter '{nameof(passPhrase)}')");
+    }
+
+    [Fact(DisplayName = "Try to decrypt a cipher text with null passPhrase - Should return an 'ArgumentNullException'")]
+    public void Decrypt_NullPassPhrase_ArgumentNullException()
+    {
+        // Arrange
+        var cipherText = "fake";
+        string passPhrase = null;
+
+
+        // Act
+        var act = Record.Exception(() => cipherText.Decrypt(passPhrase));
+
+
+        // Assert
+        act.Should()
+            .BeOfType<ArgumentNullException>();
+
+        act.Message.Should()
+            .Be($"Value cannot be null. (Parameter '{nameof(passPhrase)}')");
+    }
+
     [Theory(DisplayName = "Encrypt and decrypt text - Should return to original text")]
     [InlineData("", "fsdfd")]
     [InlineData("HelloWorld", "fssdf4523543dfd")]
-    [InlineData(".net", "534")]
+    [InlineData(".net", "")]
     [InlineData("a123456", "gdfgdfg")]
     public void EncryptDecrypt_Flow_ReturnToOriginalText(string text, string passPhrase)
     {
