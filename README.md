@@ -1,10 +1,13 @@
 # PowerUtils.Security
 Helpers, extensions and utilities to work with security
 
-![CI](https://github.com/TechNobre/PowerUtils.Security/actions/workflows/test-project.yml/badge.svg)
+![Tests](https://github.com/TechNobre/PowerUtils.Security/actions/workflows/test-project.yml/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=TechNobre_PowerUtils.Security&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=TechNobre_PowerUtils.Security)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=TechNobre_PowerUtils.Security&metric=coverage)](https://sonarcloud.io/summary/new_code?id=TechNobre_PowerUtils.Security)
+
 [![NuGet](https://img.shields.io/nuget/v/PowerUtils.Security.svg)](https://www.nuget.org/packages/PowerUtils.Security)
 [![Nuget](https://img.shields.io/nuget/dt/PowerUtils.Security.svg)](https://www.nuget.org/packages/PowerUtils.Security)
-[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=TechNobre_PowerUtils.Security)](https://sonarcloud.io/summary/new_code?id=TechNobre_PowerUtils.Security)
+[![License: MIT](https://img.shields.io/github/license/ofpinewood/http-exceptions.svg)](https://github.com/TechNobre/PowerUtils.Security/blob/main/LICENSE)
 
 
 

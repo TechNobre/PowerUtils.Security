@@ -1,4 +1,4 @@
-name: 'SonarCloud Nuget'
+name: 'SonarCloud'
 
 on:
   push:
