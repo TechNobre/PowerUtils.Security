@@ -23,6 +23,15 @@ Helpers, extensions and utilities to work with security
   - [string.ToSHA256](#string.ToSHA256)
   - [string.ToSHA384](#string.ToSHA384)
   - [string.ToSHA512](#string.ToSHA512)
+- [EncodeExtensions](#EncodeExtensions)
+  - [string.ToBase64](#string.ToBase64)
+  - [string.FromBase64](#string.FromBase64)
+- [EncryptExtensions](#EncryptExtensions)
+  - [string.Encrypt](#string.Encrypt)
+  - [string.Decrypt](#string.Decrypt)
+- [UtilsAuth](#UtilsAuth)
+  - [UtilsAuth.ToBasicAuth](#UtilsAuth.ToBasicAuth)
+  - [string.FromBasicAuth](#string.FromBasicAuth)
 
 
 
@@ -42,6 +51,8 @@ Install-Package PowerUtils.Security
 ```
 dotnet add package PowerUtils.Security
 ```
+
+
 
 ### HashExtensions <a name="HashExtensions"></a>
 
@@ -86,6 +97,70 @@ var result = "a123456".ToSHA512();
 ```
 
 
+### EncodeExtensions <a name="EncodeExtensions"></a>
+
+#### string.ToBase64(); <a name="string.ToBase64"></a>
+Encode text to base64
+
+```csharp
+// result = "SGVsbG9Xb3JsZA=="
+var result = "HelloWorld".ToBase64();
+```
+
+#### string.FromBase64(); <a name="string.FromBase64"></a>
+Decode base64 to original text
+
+```csharp
+// result = "HelloWorld"
+var result = "SGVsbG9Xb3JsZA==".FromBase64();
+```
+
+
+### EncryptExtensions <a name="EncryptExtensions"></a>
+
+#### string.Encrypt(passPhrase); <a name="string.Encrypt"></a>
+Encrypt text based in passPhrase
+
+```csharp
+var passPhrase = "fssdf4523543dfd";
+
+// result = "zhwH2dmpqUebzikGD4UHnw=="
+var result = "HelloWorld".Encrypt();
+```
+
+#### string.Decrypt(passPhrase); <a name="string.Decrypt"></a>
+Decrypt cipher text
+
+```csharp
+var passPhrase = "fssdf4523543dfd";
+
+// result = "HelloWorld"
+var result = "zhwH2dmpqUebzikGD4UHnw==".Decrypt();
+```
+
+
+### UtilsAuth <a name="UtilsAuth"></a>
+
+#### UtilsAuth.ToBasicAuth(username, password); <a name="UtilsAuth.ToBasicAuth"></a>
+Encode username and password to basic authentication (btoa) [Beautiful to Awful]
+
+```csharp
+var username = "jon";
+var password = "a123456";
+
+// result = "am9uOmExMjM0NTY="
+var result = UtilsAuth.ToBasicAuth(username, password);
+```
+
+#### string.FromBasicAuth(); <a name="string.FromBasicAuth"></a>
+Decode from basic authentication (atob) [Awful to Beautiful]
+
+```csharp
+// username = "jon" | password = "a123456"
+var result = "am9uOmExMjM0NTY=".FromBasicAuth();
+```
+
+
 
 ## Contribution
 
@@ -102,6 +177,6 @@ var result = "a123456".ToSHA512();
 ## Release Notes
 
 
-### v1.0.0 - 2022/01/16
+### v1.0.0 - 2022/01/17
 
 - Start project

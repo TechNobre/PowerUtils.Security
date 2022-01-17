@@ -11,6 +11,7 @@ namespace PowerUtils.Security
         /// </summary>
         /// <param name="text">Text input</param>
         /// <returns>MD5</returns>
+        /// <exception cref="ArgumentNullException">The <paramref name="text">text</paramref> parameter is null.</exception>
         public static string ToMD5(this string text)
         {
             if(text == null)
@@ -29,6 +30,7 @@ namespace PowerUtils.Security
         /// </summary>
         /// <param name="text">Text input</param>
         /// <returns>SHA1</returns>
+        /// <exception cref="ArgumentNullException">The <paramref name="text">text</paramref> parameter is null.</exception>
         public static string ToSHA1(this string text)
         {
             if(text == null)
@@ -47,6 +49,7 @@ namespace PowerUtils.Security
         /// </summary>
         /// <param name="text">Text input</param>
         /// <returns>SHA256</returns>
+        /// <exception cref="ArgumentNullException">The <paramref name="text">text</paramref> parameter is null.</exception>
         public static string ToSHA256(this string text)
         {
             if(text == null)
@@ -75,6 +78,7 @@ namespace PowerUtils.Security
         /// </summary>
         /// <param name="text">Text input</param>
         /// <returns>SHA384</returns>
+        /// <exception cref="ArgumentNullException">The <paramref name="text">text</paramref> parameter is null.</exception>
         public static string ToSHA384(this string text)
         {
             if(text == null)
@@ -93,6 +97,7 @@ namespace PowerUtils.Security
         /// </summary>
         /// <param name="text">Text input</param>
         /// <returns>SHA512</returns>
+        /// <exception cref="ArgumentNullException">The <paramref name="text">text</paramref> parameter is null.</exception>
         public static string ToSHA512(this string text)
         {
             if(text == null)
