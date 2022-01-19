@@ -67,7 +67,7 @@ namespace PowerUtils.Security
 #if NET462
             return new Tuple<string, string>(credentialsArray[0], credentialsArray[1]);
 #else
-        return (credentialsArray[0], credentialsArray[1]);
+            return (credentialsArray[0], credentialsArray[1]);
 #endif
 
         }
