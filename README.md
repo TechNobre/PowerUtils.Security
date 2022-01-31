@@ -32,6 +32,8 @@ Helpers, extensions and utilities to work with security
 - [EncryptExtensions](#EncryptExtensions)
   - [string.Encrypt](#string.Encrypt)
   - [string.Decrypt](#string.Decrypt)
+- [AnonymizationExtensions](#AnonymizationExtensions)
+  - [string.Anonymize](#string.Anonymize)
 - [UtilsAuth](#UtilsAuth)
   - [UtilsAuth.ToBasicAuth](#UtilsAuth.ToBasicAuth)
   - [string.FromBasicAuth](#string.FromBasicAuth)
@@ -142,6 +144,17 @@ var result = "zhwH2dmpqUebzikGD4UHnw==".Decrypt();
 ```
 
 
+### AnonymizationExtensions <a name="AnonymizationExtensions"></a>
+
+#### string.Anonymize(); <a name="string.Anonymize"></a>
+Anonymize sensitive information
+
+```csharp
+// result = "N****e"
+var result = "Nelson Nobre".Anonymize();
+```
+
+
 ### UtilsAuth <a name="UtilsAuth"></a>
 
 #### UtilsAuth.ToBasicAuth(username, password); <a name="UtilsAuth.ToBasicAuth"></a>
@@ -177,9 +190,6 @@ var result = "am9uOmExMjM0NTY=".FromBasicAuth();
 
 
 
-## Release Notes
+## Changelog
 
-
-### v1.0.0 - 2022/01/17
-
-- Start project
+[Here](./CHANGELOG.md)
