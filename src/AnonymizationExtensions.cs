@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PowerUtils.Security
+﻿namespace PowerUtils.Security
 {
     public static class AnonymizationExtensions
     {
