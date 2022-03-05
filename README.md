@@ -7,7 +7,7 @@ Helpers, extensions and utilities to work with security
 
 [![NuGet](https://img.shields.io/nuget/v/PowerUtils.Security.svg)](https://www.nuget.org/packages/PowerUtils.Security)
 [![Nuget](https://img.shields.io/nuget/dt/PowerUtils.Security.svg)](https://www.nuget.org/packages/PowerUtils.Security)
-[![License: MIT](https://img.shields.io/github/license/ofpinewood/http-exceptions.svg)](https://github.com/TechNobre/PowerUtils.Security/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/github/license/TechNobre/PowerUtils.Security.svg)](https://github.com/TechNobre/PowerUtils.Security/blob/main/LICENSE)
 
 
 
