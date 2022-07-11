@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{BF53C9AC-1A4E-420E-9F3D-265AA145919D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.project", "1.project", "{BF53C9AC-1A4E-420E-9F3D-265AA145919D}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{BF53
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cicd", "cicd", "{7DD9CDC6-6401-4DE3-A94A-C8451A078128}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.cicd", "2.cicd", "{7DD9CDC6-6401-4DE3-A94A-C8451A078128}"
 	ProjectSection(SolutionItems) = preProject
 		.github\dependabot.yml = .github\dependabot.yml
 		.github\workflows\publish-nuget.yml = .github\workflows\publish-nuget.yml
@@ -24,6 +24,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerUtils.Security", "src\PowerUtils.Security.csproj", "{B41040A3-DA8C-4037-8D0D-B795F6E12A44}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerUtils.Security.Tests", "tests\PowerUtils.Security.Tests.csproj", "{E061E018-5D79-48CE-87D8-6D1783A236A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.src", "3.src", "{326AD664-8237-4AE4-8AFD-6FD4BE82CCAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.tests", "4.tests", "{C0052CA7-25DB-4B76-BEB1-75B59817B99E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +46,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B41040A3-DA8C-4037-8D0D-B795F6E12A44} = {326AD664-8237-4AE4-8AFD-6FD4BE82CCAC}
+		{E061E018-5D79-48CE-87D8-6D1783A236A1} = {C0052CA7-25DB-4B76-BEB1-75B59817B99E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {248F462B-460C-4AA8-8C96-DE093513EC5A}
