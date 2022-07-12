@@ -2,8 +2,6 @@
 
 namespace PowerUtils.Security.Tests;
 
-[Trait("Category", "Encrypt")]
-[Trait("Extension", "EncryptExtensions")]
 public class EncryptExtensionsTests
 {
     private readonly string _passPhrase;
@@ -11,8 +9,10 @@ public class EncryptExtensionsTests
     public EncryptExtensionsTests() =>
         _passPhrase = "dsafdsfsdf40954387";
 
-    [Fact(DisplayName = "Try to encrypt a null text - Should return an 'ArgumentNullException'")]
-    public void Encrypt_NullText_ArgumentNullException()
+
+
+    [Fact]
+    public void Null_Encrypt_ArgumentNullException()
     {
         // Arrange
         string text = null;
@@ -30,8 +30,8 @@ public class EncryptExtensionsTests
             .Be($"Value cannot be null. (Parameter '{nameof(text)}')");
     }
 
-    [Fact(DisplayName = "Try to decrypt a null cipher text - Should return an 'ArgumentNullException'")]
-    public void Decrypt_NullText_ArgumentNullException()
+    [Fact]
+    public void Null_Decrypt_ArgumentNullException()
     {
         // Arrange
         string cipherText = null;
@@ -49,8 +49,8 @@ public class EncryptExtensionsTests
             .Be($"Value cannot be null. (Parameter '{nameof(cipherText)}')");
     }
 
-    [Fact(DisplayName = "Try to encrypt a text with null passPhrase - Should return an 'ArgumentNullException'")]
-    public void Encrypt_NullPassPhrase_ArgumentNullException()
+    [Fact]
+    public void NullPassPhrase_Encrypt_ArgumentNullException()
     {
         // Arrange
         var text = "fake";
@@ -69,8 +69,8 @@ public class EncryptExtensionsTests
             .Be($"Value cannot be null. (Parameter '{nameof(passPhrase)}')");
     }
 
-    [Fact(DisplayName = "Try to decrypt a cipher text with null passPhrase - Should return an 'ArgumentNullException'")]
-    public void Decrypt_NullPassPhrase_ArgumentNullException()
+    [Fact]
+    public void NullPassPhrase_Decrypt_ArgumentNullException()
     {
         // Arrange
         var cipherText = "fake";
@@ -89,12 +89,12 @@ public class EncryptExtensionsTests
             .Be($"Value cannot be null. (Parameter '{nameof(passPhrase)}')");
     }
 
-    [Theory(DisplayName = "Encrypt and decrypt text - Should return to original text")]
+    [Theory]
     [InlineData("", "fsdfd")]
     [InlineData("HelloWorld", "fssdf4523543dfd")]
     [InlineData(".net", "")]
     [InlineData("a123456", "gdfgdfg")]
-    public void EncryptDecrypt_Flow_ReturnToOriginalText(string text, string passPhrase)
+    public void Flow_EncryptAndDecrypt_ReturnToOriginalText(string text, string passPhrase)
     {
         // Arrange & Act
         var cipherText = text.Encrypt(passPhrase);
