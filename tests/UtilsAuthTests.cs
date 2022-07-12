@@ -3,12 +3,10 @@ using System.Text;
 
 namespace PowerUtils.Security.Tests;
 
-[Trait("Category", "Encode")]
-[Trait("Extension", "UtilsAuth")]
 public class UtilsAuthTests
 {
-    [Fact(DisplayName = "Try to encode to basic authentication with null username - Should return an 'ArgumentNullException'")]
-    public void ToBasicAuth_NullUsername_ArgumentNullException()
+    [Fact]
+    public void NullUsername_ToBasicAuth_ArgumentNullException()
     {
         // Arrange
         string username = null;
@@ -27,8 +25,8 @@ public class UtilsAuthTests
             .Be($"Value cannot be null. (Parameter '{nameof(username)}')");
     }
 
-    [Fact(DisplayName = "Try to encode to basic authentication with null password - Should return an 'ArgumentNullException'")]
-    public void ToBasicAuth_NullPassword_ArgumentNullException()
+    [Fact]
+    public void NullPassword_ToBasicAuth_ArgumentNullException()
     {
         // Arrange
         var username = "";
@@ -47,8 +45,8 @@ public class UtilsAuthTests
             .Be($"Value cannot be null. (Parameter '{nameof(password)}')");
     }
 
-    [Fact(DisplayName = "Try to decode from a null basic authentication - Should return an 'ArgumentNullException'")]
-    public void FromBasicAuth_NullAuth_ArgumentNullException()
+    [Fact]
+    public void NullAuth_FromBasicAuth_ArgumentNullException()
     {
         // Arrange
         string auth = null;
@@ -66,8 +64,8 @@ public class UtilsAuthTests
             .Be($"Value cannot be null. (Parameter '{nameof(auth)}')");
     }
 
-    [Fact(DisplayName = "Try to decode from a invalid base64 - Should return an 'ArgumentNullException'")]
-    public void FromBasicAuth_InvalidBase64_ArgumentException()
+    [Fact]
+    public void InvalidBase64_FromBasicAuth_ArgumentException()
     {
         // Arrange
         var auth = "sds";
@@ -85,8 +83,8 @@ public class UtilsAuthTests
             .Be($"Invalid authentication. (Parameter '{nameof(auth)}')");
     }
 
-    [Fact(DisplayName = "Try to decode from a invalid basic authentication - Should return an 'ArgumentNullException'")]
-    public void FromBasicAuth_InvalidAuth_ArgumentException()
+    [Fact]
+    public void InvalidAuth_FromBasicAuth_ArgumentException()
     {
         // Arrange
         var auth = "username:password:extra";
@@ -105,12 +103,12 @@ public class UtilsAuthTests
             .Be($"Invalid authentication. (Parameter '{nameof(auth)}')");
     }
 
-    [Theory(DisplayName = "Encode and decode basic authentication - Should return the username and password")]
+    [Theory]
     [InlineData("", "")]
     [InlineData("jon", "a123456")]
     [InlineData("username", "password")]
     [InlineData("kelly", "11234")]
-    public void EncodeDecode_Flow_ReturnToOriginalText(string username, string password)
+    public void Flow_EncodeAndDecode_ReturnToOriginalText(string username, string password)
     {
         // Arrange & Act
         var auth = UtilsAuth.ToBasicAuth(username, password);
