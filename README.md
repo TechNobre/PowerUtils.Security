@@ -13,41 +13,42 @@
 [![License: MIT](https://img.shields.io/github/license/TechNobre/PowerUtils.Security.svg)](https://github.com/TechNobre/PowerUtils.Security/blob/main/LICENSE)
 
 
+- [Support](#support-to)
+- [How to use](#how-to-use)
+  - [Installation](#installation)
+  - [HashExtensions](#HashExtensions)
+    - [string.ToMD5](#string.ToMD5)
+    - [string.ToSHA1](#string.ToSHA1)
+    - [string.ToSHA256](#string.ToSHA256)
+    - [string.ToSHA384](#string.ToSHA384)
+    - [string.ToSHA512](#string.ToSHA512)
+  - [EncodeExtensions](#EncodeExtensions)
+    - [string.ToBase64](#string.ToBase64)
+    - [string.FromBase64](#string.FromBase64)
+  - [EncryptExtensions](#EncryptExtensions)
+    - [string.Encrypt](#string.Encrypt)
+    - [string.Decrypt](#string.Decrypt)
+  - [AnonymizationExtensions](#AnonymizationExtensions)
+    - [string.Anonymize](#string.Anonymize)
+  - [UtilsAuth](#UtilsAuth)
+    - [UtilsAuth.ToBasicAuth](#UtilsAuth.ToBasicAuth)
+    - [string.FromBasicAuth](#string.FromBasicAuth)
+- [Contribution](#contribution)
+- [License](./LICENSE)
+- [Changelog](./CHANGELOG.md)
 
-## Support to
+
+
+## Support to <a name="support-to"></a>
 - .NET 3.1 or more
 - .NET Framework 4.6.2 or more
 - .NET Standard 2.0 or more
 
 
 
-## Features
+## How to use <a name="how-to-use"></a>
 
-- [HashExtensions](#HashExtensions)
-  - [string.ToMD5](#string.ToMD5)
-  - [string.ToSHA1](#string.ToSHA1)
-  - [string.ToSHA256](#string.ToSHA256)
-  - [string.ToSHA384](#string.ToSHA384)
-  - [string.ToSHA512](#string.ToSHA512)
-- [EncodeExtensions](#EncodeExtensions)
-  - [string.ToBase64](#string.ToBase64)
-  - [string.FromBase64](#string.FromBase64)
-- [EncryptExtensions](#EncryptExtensions)
-  - [string.Encrypt](#string.Encrypt)
-  - [string.Decrypt](#string.Decrypt)
-- [AnonymizationExtensions](#AnonymizationExtensions)
-  - [string.Anonymize](#string.Anonymize)
-- [UtilsAuth](#UtilsAuth)
-  - [UtilsAuth.ToBasicAuth](#UtilsAuth.ToBasicAuth)
-  - [string.FromBasicAuth](#string.FromBasicAuth)
-
-
-
-## Documentation
-
-### How to use
-
-#### Install NuGet package
+### Install NuGet package <a name="installation"></a>
 This package is available through Nuget Packages: https://www.nuget.org/packages/PowerUtils.Security
 
 **Nuget**
@@ -181,18 +182,6 @@ var result = "am9uOmExMjM0NTY=".FromBasicAuth();
 
 
 
-## Contribution
+## Contribution<a name="contribution"></a>
 
-*Help me to help others*
-
-
-
-## LICENSE
-
-[MIT](https://github.com/TechNobre/PowerUtils.Security/blob/main/LICENSE)
-
-
-
-## Changelog
-
-[Here](./CHANGELOG.md)
+If you have any questions, comments, or suggestions, please open an [issue](https://github.com/TechNobre/PowerUtils.Security/issues/new/choose) or create a [pull request](https://github.com/TechNobre/PowerUtils.Security/compare)
