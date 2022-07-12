@@ -40,9 +40,21 @@
     <NeutralLanguage>en-GB</NeutralLanguage>
 
     <PackageIcon>logo_128x128.png</PackageIcon>
+    <PackageReadmeFile>README.nuget.org.md</PackageReadmeFile>
 
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/TechNobre/PowerUtils.Security</RepositoryUrl>
+  </PropertyGroup>
+
+
+  <!-- Source link -->
+  <PropertyGroup>
+    <Deterministic>true</Deterministic>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols Condition=" '$(DebugType)' != 'embedded' ">true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
 
@@ -65,6 +77,15 @@
   <ItemGroup Condition="'$(Configuration)'=='Release'">
     <None Include="..\assets\logo\logo_128x128.png" Pack="true" PackagePath="" />
     <None Include="..\LICENSE" Pack="true" PackagePath=""/>
+    <None Include="..\README.nuget.org.md" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 
