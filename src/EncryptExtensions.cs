@@ -5,6 +5,7 @@ using System.Text;
 
 namespace PowerUtils.Security
 {
+    [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
     public static class EncryptExtensions
     {
         #region CONSTANTS
@@ -12,10 +13,12 @@ namespace PowerUtils.Security
         // This size of the IV (in bytes) must = (keysize / 8). Default keysize is 256, so the IV must be
         // 32 bytes long. Using a 16 character string here gives us 32 bytes when converted to a byte array.
 #pragma warning disable IDE1006 // Naming Styles
+        [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
         private static readonly byte[] INIT_VECTOR_BYTES = Encoding.ASCII.GetBytes("AjdoI9N9JEoTnjTj");
 #pragma warning restore IDE1006 // Naming Styles
 
         // This constant is used to determine the keysize of the encryption algorithm.
+        [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
         private const int KEY_SIZE = 256;
         #endregion
 
@@ -28,6 +31,7 @@ namespace PowerUtils.Security
         /// <returns>Cipher text</returns>
         /// <exception cref="ArgumentNullException">The <paramref name="text">text</paramref> parameter is null.</exception>
         /// <exception cref="ArgumentNullException">The <paramref name="passPhrase">passPhrase</paramref> parameter is null.</exception>
+        [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
         public static string Encrypt(this string text, string passPhrase)
         {
             if(text == null)
@@ -72,6 +76,7 @@ namespace PowerUtils.Security
         /// <returns>Original text</returns>
         /// <exception cref="ArgumentNullException">The <paramref name="cipherText">cipherText</paramref> parameter is null.</exception>
         /// <exception cref="ArgumentNullException">The <paramref name="passPhrase">passPhrase</paramref> parameter is null.</exception>
+        [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
         public static string Decrypt(this string cipherText, string passPhrase)
         {
             if(cipherText == null)

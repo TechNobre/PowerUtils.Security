@@ -3,6 +3,7 @@ using System.Text;
 
 namespace PowerUtils.Security
 {
+    [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
     public static class UtilsAuth
     {
         /// <summary>
@@ -13,6 +14,7 @@ namespace PowerUtils.Security
         /// <returns>Basic authentication without prefix 'basic'</returns>
         /// <exception cref="ArgumentNullException">The <paramref name="username">username</paramref> parameter is null.</exception>
         /// <exception cref="ArgumentNullException">The <paramref name="password">password</paramref> parameter is null.</exception>
+        [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
         public static string ToBasicAuth(string username, string password)
         {
             if(username == null)
@@ -36,8 +38,10 @@ namespace PowerUtils.Security
         /// <exception cref="ArgumentNullException">The <paramref name="auth">auth</paramref> parameter is null.</exception>
         /// <exception cref="ArgumentException">The <paramref name="auth">auth</paramref> parameter is not a basic authentication.</exception>
 #if NET462
-        public static Tuple<string, string> FromBasicAuth(this string auth)
+[Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
+public static Tuple<string, string> FromBasicAuth(this string auth)
 #else
+        [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
         public static (string Username, string Password) FromBasicAuth(this string auth)
 #endif
         {

@@ -1,5 +1,8 @@
-﻿namespace PowerUtils.Security
+﻿using System;
+
+namespace PowerUtils.Security
 {
+    [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
     public static class AnonymizationExtensions
     {
         /// <summary>
@@ -7,6 +10,7 @@
         /// </summary>
         /// <param name="input">Information to anonymize</param>
         /// <returns>information replaced by *</returns>
+        [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
         public static string Anonymize(this string input)
         {
 #if NETSTANDARD2_1 || NETCOREAPP3_1 || NET5_0_OR_GREATER
