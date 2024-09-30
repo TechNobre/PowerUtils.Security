@@ -4,6 +4,7 @@ using System.Text;
 
 namespace PowerUtils.Security
 {
+    [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
     public static class HashExtensions
     {
         /// <summary>
@@ -12,6 +13,7 @@ namespace PowerUtils.Security
         /// <param name="text">Text input</param>
         /// <returns>MD5</returns>
         /// <exception cref="ArgumentNullException">The <paramref name="text">text</paramref> parameter is null.</exception>
+        [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
         public static string ToMD5(this string text)
         {
             if(text == null)
@@ -31,6 +33,7 @@ namespace PowerUtils.Security
         /// <param name="text">Text input</param>
         /// <returns>SHA1</returns>
         /// <exception cref="ArgumentNullException">The <paramref name="text">text</paramref> parameter is null.</exception>
+        [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
         public static string ToSHA1(this string text)
         {
             if(text == null)
@@ -50,6 +53,7 @@ namespace PowerUtils.Security
         /// <param name="text">Text input</param>
         /// <returns>SHA256</returns>
         /// <exception cref="ArgumentNullException">The <paramref name="text">text</paramref> parameter is null.</exception>
+        [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
         public static string ToSHA256(this string text)
         {
             if(text == null)
@@ -79,6 +83,7 @@ namespace PowerUtils.Security
         /// <param name="text">Text input</param>
         /// <returns>SHA384</returns>
         /// <exception cref="ArgumentNullException">The <paramref name="text">text</paramref> parameter is null.</exception>
+        [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
         public static string ToSHA384(this string text)
         {
             if(text == null)
@@ -98,6 +103,7 @@ namespace PowerUtils.Security
         /// <param name="text">Text input</param>
         /// <returns>SHA512</returns>
         /// <exception cref="ArgumentNullException">The <paramref name="text">text</paramref> parameter is null.</exception>
+        [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
         public static string ToSHA512(this string text)
         {
             if(text == null)
@@ -111,6 +117,7 @@ namespace PowerUtils.Security
             }
         }
 
+        [Obsolete("This package has been discontinued because it never evolved, and the code present in this package does not justify its continuation. It is preferable to implement this code directly in the project if necessary.")]
         private static string _hashingText(this HashAlgorithm hash, string text)
         {
             var textBytes = Encoding.UTF8.GetBytes(text);
