@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/TechNobre/PowerUtils.Security/compare/v1.2.0...v2.0.0) (2024-09-30)
+
+
+### Bug Fixes
+
+* Marked all implementations as `Obsolete` ([54e491d](https://github.com/TechNobre/PowerUtils.Security/commit/54e491d385db67708638450811825d65ccc1bb0a))
+
+
+### BREAKING CHANGES
+
+* Deprecated package
+
 # [1.2.0](https://github.com/TechNobre/PowerUtils.Security/compare/v1.1.0...v1.2.0) (2022-07-12)
 
 
