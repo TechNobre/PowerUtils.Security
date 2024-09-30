@@ -1,41 +1,35 @@
 # PowerUtils.Security
 
+# :warning: DEPRECATED
+
+This package has been discontinued because it never evolved, and the current code does not justify its continuation. .NET has evolved significantly, and most of the features provided by this library are now built into the framework with better security and performance.
+
 ![Logo](https://raw.githubusercontent.com/TechNobre/PowerUtils.Security/main/assets/logo/logo_128x128.png)
 
 ***Helpers, extensions and utilities to work with security***
 
-![Tests](https://github.com/TechNobre/PowerUtils.Security/actions/workflows/tests.yml/badge.svg)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=TechNobre_PowerUtils.Security&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=TechNobre_PowerUtils.Security)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=TechNobre_PowerUtils.Security&metric=coverage)](https://sonarcloud.io/summary/new_code?id=TechNobre_PowerUtils.Security)
 
-[![NuGet](https://img.shields.io/nuget/v/PowerUtils.Security.svg)](https://www.nuget.org/packages/PowerUtils.Security)
-[![Nuget](https://img.shields.io/nuget/dt/PowerUtils.Security.svg)](https://www.nuget.org/packages/PowerUtils.Security)
-[![License: MIT](https://img.shields.io/github/license/TechNobre/PowerUtils.Security.svg)](https://github.com/TechNobre/PowerUtils.Security/blob/main/LICENSE)
-
-
-- [Support](#support-to)
-- [How to use](#how-to-use)
-  - [Installation](#installation)
-  - [HashExtensions](#HashExtensions)
-    - [string.ToMD5](#string.ToMD5)
-    - [string.ToSHA1](#string.ToSHA1)
-    - [string.ToSHA256](#string.ToSHA256)
-    - [string.ToSHA384](#string.ToSHA384)
-    - [string.ToSHA512](#string.ToSHA512)
-  - [EncodeExtensions](#EncodeExtensions)
-    - [string.ToBase64](#string.ToBase64)
-    - [string.FromBase64](#string.FromBase64)
-  - [EncryptExtensions](#EncryptExtensions)
-    - [string.Encrypt](#string.Encrypt)
-    - [string.Decrypt](#string.Decrypt)
-  - [AnonymizationExtensions](#AnonymizationExtensions)
-    - [string.Anonymize](#string.Anonymize)
-  - [UtilsAuth](#UtilsAuth)
-    - [UtilsAuth.ToBasicAuth](#UtilsAuth.ToBasicAuth)
-    - [string.FromBasicAuth](#string.FromBasicAuth)
+- [Support to ](#support-to-)
+- [How to use ](#how-to-use-)
+  - [Install NuGet package ](#install-nuget-package-)
+  - [HashExtensions ](#hashextensions-)
+    - [string.ToMD5(); ](#stringtomd5-)
+    - [string.ToSHA1(); ](#stringtosha1-)
+    - [string.ToSHA256(); ](#stringtosha256-)
+    - [string.ToSHA384(); ](#stringtosha384-)
+    - [string.ToSHA512(); ](#stringtosha512-)
+  - [EncodeExtensions ](#encodeextensions-)
+    - [string.ToBase64(); ](#stringtobase64-)
+    - [string.FromBase64(); ](#stringfrombase64-)
+  - [EncryptExtensions ](#encryptextensions-)
+    - [string.Encrypt(passPhrase); ](#stringencryptpassphrase-)
+    - [string.Decrypt(passPhrase); ](#stringdecryptpassphrase-)
+  - [AnonymizationExtensions ](#anonymizationextensions-)
+    - [string.Anonymize(); ](#stringanonymize-)
+  - [UtilsAuth ](#utilsauth-)
+    - [UtilsAuth.ToBasicAuth(username, password); ](#utilsauthtobasicauthusername-password-)
+    - [string.FromBasicAuth(); ](#stringfrombasicauth-)
 - [Contribution](#contribution)
-- [License](./LICENSE)
-- [Changelog](./CHANGELOG.md)
 
 
 
